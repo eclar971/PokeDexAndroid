@@ -6,21 +6,38 @@
     android:layout_height="match_parent"
     android:background="#000000"
     tools:context=".ui.home.HomeFragment">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/load"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="TODO"
+        android:src="@drawable/loading"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription,HardcodedText" />
+
     <com.qtalk.recyclerviewfastscroller.RecyclerViewFastScroller
         android:layout_width="match_parent"
         android:id="@+id/fastscroller"
         android:layout_height="match_parent"
         app:handleHeight="48dp"
         app:handleWidth="25dp">
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="-16dp"
-        tools:layout_editor_absoluteY="65dp"
-        tools:listitem="@layout/recycler_view_item"
-        android:paddingLeft="5dp"
-        android:paddingTop="5dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="15dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            tools:ignore="RtlHardcoded,RtlSymmetry"
+            tools:layout_editor_absoluteX="-16dp"
+            tools:layout_editor_absoluteY="65dp"
+            tools:listitem="@layout/recycler_view_item" />
 
     </com.qtalk.recyclerviewfastscroller.RecyclerViewFastScroller>
 </androidx.constraintlayout.widget.ConstraintLayout>

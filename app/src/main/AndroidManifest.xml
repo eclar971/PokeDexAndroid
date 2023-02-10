@@ -11,11 +11,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PokeDex"
         tools:targetApi="31">
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.PokeDex.NoActionBar">
+            android:theme="@style/Theme.PokeDex.NoActionBar"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
